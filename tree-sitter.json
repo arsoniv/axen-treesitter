@@ -9,6 +9,7 @@
       "file-types": [
         "axenlang"
       ],
+      "highlights": "queries/highlights.scm",
       "injection-regex": "^axenlang$",
       "class-name": "TreeSitterAxenlang"
     }
