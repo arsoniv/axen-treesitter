@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "axenlang",
+      "camelcase": "Axenlang",
+      "title": "Axenlang",
+      "scope": "source.axenlang",
+      "file-types": [
+        "axenlang"
+      ],
+      "injection-regex": "^axenlang$",
+      "class-name": "TreeSitterAxenlang"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Axenlang grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Arsoniv",
+        "email": "arsonivalt@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-axenlang"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
