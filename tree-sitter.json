@@ -10,9 +10,9 @@
       "file-types": [
         "ax"
       ],
-      "highlights": "queries/highlights.scm",
-      "class-name": "TreeSitterAxenlang",
-      "injection-regex": "ax"
+      "highlights": "queries/axenlang/highlights.scm",
+      "injection-regex": "^axenlang$",
+      "class-name": "TreeSitterAxenlang"
     }
   ],
   "metadata": {
