@@ -429,6 +429,32 @@
     }
   },
   {
+    "type": "intdef_declaration",
+    "named": true,
+    "fields": {
+      "alias": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "int_literal",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "lvalue",
     "named": true,
     "fields": {},
@@ -717,6 +743,10 @@
         },
         {
           "type": "import_statement",
+          "named": true
+        },
+        {
+          "type": "intdef_declaration",
           "named": true
         },
         {
@@ -1059,6 +1089,10 @@
   {
     "type": "int_literal",
     "named": true
+  },
+  {
+    "type": "intdef",
+    "named": false
   },
   {
     "type": "long",

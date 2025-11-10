@@ -26,6 +26,7 @@ module.exports = grammar({
       $.import_statement,
       $.class_declaration,
       $.typedef_declaration,
+      $.intdef_declaration,
       $.function_declaration,
     )),
 
@@ -46,6 +47,14 @@ module.exports = grammar({
       'typedef',
       field('alias', $.identifier),
       field('target', $.type),
+      ';'
+    ),
+
+    // intdef declarations
+    intdef_declaration: $ => seq(
+      'intdef',
+      field('alias', $.identifier),
+      field('target', $.int_literal),
       ';'
     ),
 

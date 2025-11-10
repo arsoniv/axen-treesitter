@@ -1,6 +1,7 @@
 [
   "import"
   "typedef"
+  "intdef"
   "class"
   "return"
   "if"
@@ -41,6 +42,9 @@
 (class_reference) @type
 
 (typedef_declaration
+  alias: (identifier) @type.definition)
+
+(intdef_declaration
   alias: (identifier) @type.definition)
 
 (parameter
