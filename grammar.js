@@ -333,8 +333,8 @@ module.exports = grammar({
       ')'
     ),
 
-    // Literals
-    int_literal: $ => /[0-9]+/,
+    // Literals (supports hex)
+    int_literal: $ => /(?:0[xX][0-9a-fA-F]+|[0-9]+)/,
 
     float_literal: $ => /[0-9]+\.[0-9]+/,
 
