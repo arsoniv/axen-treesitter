@@ -62,7 +62,8 @@
 (variable_reference
   name: (identifier) @variable)
 
-(int_literal) @number
+(hex_literal) @number.hex
+(decimal_literal) @number
 (float_literal) @number.float
 (string_literal) @string
 

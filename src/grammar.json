@@ -1361,8 +1361,31 @@
       ]
     },
     "int_literal": {
-      "type": "PATTERN",
-      "value": "[0-9]+"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hex_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "decimal_literal"
+        }
+      ]
+    },
+    "hex_literal": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "0[xX][0-9a-fA-F]+"
+      }
+    },
+    "decimal_literal": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[0-9]+"
+      }
     },
     "float_literal": {
       "type": "PATTERN",

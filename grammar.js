@@ -334,7 +334,14 @@ module.exports = grammar({
     ),
 
     // Literals (supports hex)
-    int_literal: $ => /(?:0[xX][0-9a-fA-F]+|[0-9]+)/,
+    int_literal: $ => choice(
+      $.hex_literal,
+      $.decimal_literal,
+    ),
+
+    hex_literal: $ => token(/0[xX][0-9a-fA-F]+/),
+    
+    decimal_literal: $ => token(/[0-9]+/),
 
     float_literal: $ => /[0-9]+\.[0-9]+/,
 
