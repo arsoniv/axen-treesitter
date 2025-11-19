@@ -839,6 +839,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "nullptr_literal"
+        },
+        {
+          "type": "SYMBOL",
           "name": "variable_reference"
         },
         {
@@ -1377,19 +1381,23 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "0[xX][0-9a-fA-F]+"
+        "value": "0[xX][0-9a-fA-F]+u?"
       }
     },
     "decimal_literal": {
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "[0-9]+"
+        "value": "[0-9]+u?"
       }
     },
     "float_literal": {
       "type": "PATTERN",
-      "value": "[0-9]+\\.[0-9]+"
+      "value": "[0-9]+\\.[0-9]+u?"
+    },
+    "nullptr_literal": {
+      "type": "STRING",
+      "value": "nullptr"
     },
     "string_literal": {
       "type": "SEQ",

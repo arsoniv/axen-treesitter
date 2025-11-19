@@ -700,6 +700,10 @@
           "named": true
         },
         {
+          "type": "nullptr_literal",
+          "named": true
+        },
+        {
           "type": "parenthesized_expression",
           "named": true
         },
@@ -1120,6 +1124,10 @@
   {
     "type": "long",
     "named": false
+  },
+  {
+    "type": "nullptr_literal",
+    "named": true
   },
   {
     "type": "ptr",

@@ -66,6 +66,7 @@
 (decimal_literal) @number
 (float_literal) @number.float
 (string_literal) @string
+(nullptr_literal) @constant.builtin
 
 [
   "="

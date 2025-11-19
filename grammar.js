@@ -230,6 +230,7 @@ module.exports = grammar({
       $.int_literal,
       $.float_literal,
       $.string_literal,
+      $.nullptr_literal,
       $.variable_reference,
       $.function_call,
       $.struct_access,
@@ -333,17 +334,18 @@ module.exports = grammar({
       ')'
     ),
 
-    // Literals (supports hex)
     int_literal: $ => choice(
       $.hex_literal,
       $.decimal_literal,
     ),
 
-    hex_literal: $ => token(/0[xX][0-9a-fA-F]+/),
-    
-    decimal_literal: $ => token(/[0-9]+/),
+    hex_literal: $ => token(/0[xX][0-9a-fA-F]+u?/),
 
-    float_literal: $ => /[0-9]+\.[0-9]+/,
+    decimal_literal: $ => token(/[0-9]+u?/),
+
+    float_literal: $ => /[0-9]+\.[0-9]+u?/,
+
+    nullptr_literal: $ => 'nullptr',
 
     string_literal: $ => seq(
       '"',
