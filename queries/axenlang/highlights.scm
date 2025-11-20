@@ -41,6 +41,8 @@
 
 (class_reference) @type
 
+(function_pointer_type) @type
+
 (typedef_declaration
   alias: (identifier) @type.definition)
 

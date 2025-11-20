@@ -377,6 +377,47 @@
     }
   },
   {
+    "type": "function_pointer_parameter_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_pointer_type",
+    "named": true,
+    "fields": {
+      "return_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "function_pointer_parameter_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "if_statement",
     "named": true,
     "fields": {
@@ -863,6 +904,10 @@
         },
         {
           "type": "class_reference",
+          "named": true
+        },
+        {
+          "type": "function_pointer_type",
           "named": true
         },
         {

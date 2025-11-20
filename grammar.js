@@ -117,6 +117,7 @@ module.exports = grammar({
     type: $ => choice(
       $.primitive_type,
       $.pointer_type,
+      $.function_pointer_type,
       $.array_type,
       $.class_reference,
     ),
@@ -142,6 +143,19 @@ module.exports = grammar({
       'ptr',
       field('target', $.type)
     )),
+
+    function_pointer_type: $ => prec(3, seq(
+      'ptr',
+      field('return_type', $.type),
+      '(',
+      optional($.function_pointer_parameter_list),
+      ')'
+    )),
+
+    function_pointer_parameter_list: $ => seq(
+      $.type,
+      repeat(seq(',', $.type))
+    ),
 
     array_type: $ => prec(2, seq(
       field('element_type', $.type),
