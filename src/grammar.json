@@ -1517,8 +1517,11 @@
       "value": "[0-9]+\\.[0-9]+u?"
     },
     "nullptr_literal": {
-      "type": "STRING",
-      "value": "nullptr"
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "nullptr"
+      }
     },
     "string_literal": {
       "type": "SEQ",

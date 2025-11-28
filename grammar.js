@@ -27,7 +27,7 @@ module.exports = grammar({
       $.class_declaration,
       $.typedef_declaration,
       $.intdef_declaration,
-      $.function_declaration,
+      $.function_declaration
     )),
 
     comment: $ => token(choice(
@@ -69,7 +69,7 @@ module.exports = grammar({
 
     member_declaration: $ => choice(
       $.field_declaration,
-      $.method_declaration,
+      $.method_declaration
     ),
 
     field_declaration: $ => seq(
@@ -119,7 +119,7 @@ module.exports = grammar({
       $.pointer_type,
       $.function_pointer_type,
       $.array_type,
-      $.class_reference,
+      $.class_reference
     ),
 
     primitive_type: $ => choice(
@@ -182,7 +182,7 @@ module.exports = grammar({
       $.if_statement,
       $.while_statement,
       $.expression_statement,
-      $.block,
+      $.block
     ),
 
     variable_declaration: $ => seq(
@@ -244,13 +244,13 @@ module.exports = grammar({
       $.struct_access,
       $.array_access,
       $.pointer_index_access,
-      $.dereference,
+      $.dereference
     ),
 
     // Expressions
     expression: $ => choice(
       $.binary_expression,
-      $.primary_expression,
+      $.primary_expression
     ),
 
     primary_expression: $ => choice(
@@ -266,7 +266,7 @@ module.exports = grammar({
       $.dereference,
       $.address_of,
       $.parenthesized_expression,
-      $.sizeof_expression,
+      $.sizeof_expression
     ),
 
     binary_expression: $ => choice(
@@ -309,7 +309,7 @@ module.exports = grammar({
         field('left', $.expression),
         field('operator', '%'),
         field('right', $.expression)
-      )),
+      ))
     ),
 
     variable_reference: $ => field('name', $.identifier),
@@ -369,7 +369,7 @@ module.exports = grammar({
 
     int_literal: $ => choice(
       $.hex_literal,
-      $.decimal_literal,
+      $.decimal_literal
     ),
 
     hex_literal: $ => token(/0[xX][0-9a-fA-F]+u?/),
@@ -378,7 +378,7 @@ module.exports = grammar({
 
     float_literal: $ => /[0-9]+\.[0-9]+u?/,
 
-    nullptr_literal: $ => 'nullptr',
+    nullptr_literal: $ => token('nullptr'),
 
     string_literal: $ => seq(
       '"',
@@ -389,6 +389,6 @@ module.exports = grammar({
       '"'
     ),
 
-    identifier: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
+    identifier: $ => /[a-zA-Z_][a-zA-Z0-9_]*/
   }
 });
