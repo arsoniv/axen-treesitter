@@ -177,6 +177,8 @@ module.exports = grammar({
       $.variable_declaration,
       $.assignment_statement,
       $.return_statement,
+      $.break_statement,
+      $.continue_statement,
       $.if_statement,
       $.while_statement,
       $.expression_statement,
@@ -202,6 +204,17 @@ module.exports = grammar({
       optional(field('value', $.expression)),
       ';'
     ),
+
+    break_statement: $ => seq(
+      'break',
+      ';'
+    ),
+
+    continue_statement: $ => seq(
+      'continue',
+      ';'
+    ),
+
 
     if_statement: $ => seq(
       'if',

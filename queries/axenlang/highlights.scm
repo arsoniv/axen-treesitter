@@ -7,6 +7,8 @@
   "if"
   "else"
   "while"
+  "break"
+  "continue"
 ] @keyword
 
 [
