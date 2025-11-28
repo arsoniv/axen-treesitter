@@ -266,6 +266,7 @@ module.exports = grammar({
       $.dereference,
       $.address_of,
       $.parenthesized_expression,
+      $.sizeof_expression,
     ),
 
     binary_expression: $ => choice(
@@ -359,6 +360,11 @@ module.exports = grammar({
       '(',
       $.expression,
       ')'
+    ),
+
+    sizeof_expression: $ => seq(
+      'sizeof',
+      $.type
     ),
 
     int_literal: $ => choice(

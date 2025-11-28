@@ -976,6 +976,10 @@
         {
           "type": "SYMBOL",
           "name": "parenthesized_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sizeof_expression"
         }
       ]
     },
@@ -1465,6 +1469,19 @@
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "sizeof_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sizeof"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
         }
       ]
     },

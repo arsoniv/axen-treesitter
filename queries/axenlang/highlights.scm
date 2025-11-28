@@ -9,6 +9,7 @@
   "while"
   "break"
   "continue"
+  "sizeof"
 ] @keyword
 
 [

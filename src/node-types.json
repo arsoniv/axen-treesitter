@@ -763,6 +763,10 @@
           "named": true
         },
         {
+          "type": "sizeof_expression",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
@@ -796,6 +800,21 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "sizeof_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1214,6 +1233,10 @@
   },
   {
     "type": "short",
+    "named": false
+  },
+  {
+    "type": "sizeof",
     "named": false
   },
   {
